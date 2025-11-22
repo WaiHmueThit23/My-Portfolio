@@ -1,350 +1,721 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wai Hmue Thit - Portfolio</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* Custom styles to ensure smooth scrolling and typography */
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* Dark background, similar to GitHub dark mode */
-            color: #ffffff;
-        }
-        .section-padding {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-        }
-        /* Custom dark card style for contrast */
-        .dark-card {
-            background-color: #161b22; 
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-dark': '#0d1117',
-                        'secondary-dark': '#161b22',
-                        'accent': '#34d399', /* Emerald Green for a tech/data feel */
-                    }
-                }
-            }
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rangsit university, Frequently Asked Questions For Admissions Requirements of Rangsit University</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&diplay=swap');
+*{
+    margin: 0;
+    font-family:'Poppins', sans-serif;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+.purplebar{
+  height: 30px; /* Set the height of the bar */
+  background-color: #d088e4; /* Pink color */
+  width: 100%; /* Full width of the container */
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-        // Function to initialize Lucide icons
-        window.onload = function() {
-            lucide.createIcons();
-        }
-    </script>
+.nav {
+  display: flex; 
+  align-items: center; 
+  padding: 10px;
+  background-color: #3C273C;
+  color: white;
+}
+
+.nav img {
+  margin-left:40px;
+  height: 40px; 
+  margin-right: 20px; 
+}
+
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#menu li {
+  margin-right: 20px;
+}
+
+#menu li:last-child {
+  margin-right: 0;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: white;
+}
+.foot li a{
+  text-decoration: none;
+}
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  .nav {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: flex-start; /* Align items to the start */
+  }
+
+  .nav img {
+      margin-right: 0; /* Remove margin for logo on smaller screens */
+      margin-bottom: 10px; /* Add space between logo and menu */
+  }
+
+  #menu {
+      flex-direction: column; /* Stack menu items vertically on smaller screens */
+  }
+
+  #menu li {
+      margin-right: 0; /* Remove right margin for menu items */
+      margin-bottom: 5px; /* Add space between menu items */
+  }
+}
+
+.nav ul > li:hover{
+    background-color:#371E59;
+    top: 8px;
+}
+
+/* Body text */
+
+
+  .question {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .answer {
+    padding: 10px;
+    display: none;
+  }
+  
+  .answer p {
+    margin-top: 0;
+  }
+  
+  .answer ul {
+    margin-top: 0;
+    padding-left: 20px;
+  }
+
+.container{
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 30px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    left:400px;
+    top: 100px;
+}
+
+.box{
+    background-color: #ddd;
+    padding:15px;
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left:35px;
+    margin-right:35px;
+  }
+
+.box h1{
+    color: #3C273C;
+    text-align: left;
+}
+.box h3{
+    color: #22b8c8;
+    text-decoration: underline;
+    margin-left:0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.open-button {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 80px;
+    height:80px;
+    font-size: 40px;
+    margin-bottom:80px ;
+    border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center; 
+  }
+  .open-button i {
+    display: block;
+    padding: 10px;
+  }
+  
+  /* The popup chat - hidden by default */
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+  }
+  
+
+  .form-container {
+    max-width: 400px;
+    padding: 10px;
+    background-color: rgb(140, 138, 138);
+    margin-bottom: 85px;
+    border-radius: 5px;    
+    z-index: 10000;
+  }
+ 
+  .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: 1px solid rgb(172, 168, 168);
+    background: white;
+    resize: none;
+    min-height:180px; 
+    border-radius: 5px;
+  }
+  .form-container .textareaTop{
+    min-height : 100px;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  
+  /* Set a style for the submit/send button */
+  .form-container .btn {
+    background-color: #ffffff;
+    color:#3C273C;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    display: inline;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color:  #ffffff;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  /*footer*/
+.foot{
+    color: white;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: baseline;
+    align-content: center;
+    background-color: #3C273C;
+    height: 150px;  
+}
+
+.foot a{
+  color: white;
+}
+
+.contact{
+    margin-top: 0px;
+    display: flex;
+    width:25%;
+    flex-direction: column;  
+}
+.contact h4{
+    margin-left:5px;
+}
+.address{
+    margin: 0;
+    display: flex;
+    width:25%;
+    flex-direction: column;
+    padding: 10px;
+}
+.socialmedia{
+    margin: 0;
+    display: flex;
+    width:25%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+@media (max-width: 768px){ 
+/*body*/
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    left: 400px;
+    top: 100px;
+}
+.container h1{
+    display: none;
+    color: #3C273C;
+}
+
+.open-button { 
+    width: 80px;
+    height: 80px; 
+    border-radius: 50%; 
+    background-color: rgb(0, 132, 255); 
+  }
+  
+
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 1;
+  }
+
+  .form-container {
+    max-width: 400px;
+    padding: 10px;
+    background-color: rgb(140, 138, 138);
+    margin-bottom: 85px;
+    border-radius: 5px;    
+  }
+
+  .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: 1px solid rgb(172, 168, 168);
+    background: white;
+    resize: none;
+    min-height:180px;
+    border-radius: 5px;
+  }
+  .form-container .textareaTop{
+    min-height : 100px;
+  }
+  
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  .form-container .btn {
+    background-color: #ffffff;
+    color: #3C273C;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    display: inline;
+  }
+
+  .form-container .cancel {
+    background-color:  #ffffff;
+  }
+
+
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+.foot{
+    height: auto;
+}
+
+}
+
+
+  </style>
 </head>
-<body class="bg-primary-dark">
+<body>
+  <div class="purplebar">
 
-    <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-secondary-dark/95 backdrop-blur-sm shadow-lg">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-accent">Wai Hmue Thit</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-accent transition duration-300">About</a>
-                <a href="#skills" class="text-gray-300 hover:text-accent transition duration-300">Skills</a>
-                <a href="#projects" class="text-gray-300 hover:text-accent transition duration-300">Projects</a>
-                <a href="#contact" class="text-gray-300 hover:text-accent transition duration-300">Contact</a>
-            </div>
-            
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </nav>
+  </div>
+  <div class="nav">
+    <a href="https://www.rsuip.org" target="_blank">
+      <img src = "logo.webp"> </a>
+      <ul id = "menu">
+          <li><a href="https://www.rsuip.org/#" target="_blank">About Us</a></li>
+          <li><a href="https://www.rsuip.org/programmes/" target="_blank">Programmes</a></li>
+          <li><a href="https://www.rsuip.org/admissions/" target="_blank">Admissions</a></li>
+          <li><a href="https://www.rsuip.org/for-student-1/" target="_blank">For Students</a></li>
+          <li>FAQ</li>
+      </ul> 
+ </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-secondary-dark pb-4">
-            <a href="#about" class="block px-6 py-2 text-gray-300 hover:text-accent hover:bg-gray-800 transition duration-300">About</a>
-            <a href="#skills" class="block px-6 py-2 text-gray-300 hover:text-accent hover:bg-gray-800 transition duration-300">Skills</a>
-            <a href="#projects" class="block px-6 py-2 text-gray-300 hover:text-accent hover:bg-gray-800 transition duration-300">Projects</a>
-            <a href="#contact" class="block px-6 py-2 text-gray-300 hover:text-accent hover:bg-gray-800 transition duration-300">Contact</a>
-        </div>
-    </header>
 
-    <!-- 1. Hero Section -->
-    <section id="home" class="section-padding container mx-auto px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-            <!-- Text Content -->
-            <div class="lg:w-3/5 text-center lg:text-left">
-                <span class="text-accent font-semibold text-lg uppercase tracking-wider">Hello! My name is</span>
-                <h1 class="text-5xl md:text-7xl font-extrabold mt-2 leading-tight">
-                    Wai Hmue Thit aka Cas
-                </h1>
-                <h2 class="text-2xl md:text-3xl font-light text-gray-400 mt-4">
-                    Data Analyst, Project Manager & UI/UX Designer
-                </h2>
-                <p class="mt-8 text-lg text-gray-300 max-w-xl mx-auto lg:mx-0">
-                    Motivated final year ICT student specializing in Data Analytics, Project Management, and UI/UX Design. With hands-on experience in SQL, Python, and Figma, I am passionate about turning data into actionable insights and designing user-centered digital solutions.
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#projects" class="px-8 py-3 bg-accent text-primary-dark font-bold rounded-lg transition duration-300 hover:bg-emerald-400 shadow-xl">
-                        View Projects
-                    </a>
-                    <a href="#contact" class="px-8 py-3 border border-gray-600 text-white font-bold rounded-lg transition duration-300 hover:bg-secondary-dark/70">
-                        Get In Touch
-                    </a>
-                </div>
-            </div>
 
-            <!-- Placeholder Image -->
-            <div class="lg:w-2/5 flex justify-center">
-                <div class="w-64 h-64 md:w-80 md:h-80 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden border-4 border-accent shadow-2xl">
-                    <!-- Placeholder SVG for the avatar 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60%" height="60%" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-check">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/>
-                    </svg>-->
-                    <!-- Note: Replace this SVG with an image of Wai Hmue Thit using the IMG tag -->
-                    <img src="Profile.jpg" alt="Wai Hmue Thit Profile" class="w-full h-full object-cover"/>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="box">
+    <h1>FAQ: Frequently Asked Questions</h1>
+    <h3>ADMISSIONS REQUIREMENTS</h3>
+    <div class="faq">
+      <div class="question" onclick="toggleAnswer('answer1')">What are the admission requirements?</div>
+      <div class="answer" id="answer1">
+        <p>The academic entry requirement is high school diploma or equivalent and IELTS 5 or equivalent.</p>
+      </div>
 
-    <!-- 2. About Me / Experience Section -->
-    <section id="about" class="section-padding bg-secondary-dark">
-        <div class="container mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+      <div class="question" onclick="toggleAnswer('answer2')">What if don’t have any recent IELTS scores?</div>
+      <div class="answer" id="answer2">
+        <p>Students can take an English Placement Test (free-of-charge) once they arrive at the university. If a student’s English level is below the minimum requirement of IELTS 5, the student would need to take some English subjects before starting the program.
+            Please see the section English Placement Test for more details.</p>        
+      </div>
 
-            <div class="flex flex-col lg:flex-row items-start gap-12">
-                <div class="lg:w-2/3">
-                    <h3 class="text-3xl font-semibold text-accent mb-4">My Professional Journey</h3>
-                    <p class="text-gray-300 leading-relaxed text-lg">
-                        I am a devoted and passionate individual with a strong interest in both UI/UX design and data visualization. My first experience with a database management system project at university deeply intrigued and committed me to this field.
-                    </p>
-                    <p class="mt-6 text-gray-300 leading-relaxed text-lg">
-                        As a final year student at Rangsit University International College, I am eager to apply my knowledge in data analytics and user-centered design to real-world projects. I thrive on leading ideation, creation, and digital strategy, and I look forward to bringing my expertise to a dynamic team to contribute to innovative solutions.
-                    </p>
-                </div>
-                
-                <div class="lg:w-1/3 w-full dark-card p-6 rounded-xl">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <i data-lucide="sparkles" class="w-6 h-6 text-accent"></i>
-                        <h4 class="text-xl font-bold text-white">Hard Skills</h4>
-                    </div>
-                    <ul class="space-y-3 text-gray-300 text-base">
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-accent"></i>Data Visualization & Analysis</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-accent"></i>Basic Power BI</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-accent"></i>SQL & Database Management</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-accent"></i>Basic Python</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-accent"></i>UI/UX Design (Figma)</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-accent"></i>Project Management</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-accent"></i>HTML/CSS</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="question" onclick="toggleAnswer('answer3')">How long does the admissions process take?</div>
+      <div class="answer" id="answer3">
+        <p>Once we have the completed application file, including all required materials, it usually takes a few days to a week for application processing, review, and for your Letter of Acceptance to be sent by email. You will then be required to pay a non-refundable partial payment 30% of tuition fees of the semester before your visa supporting document is granted. The remaining 70% of the fees are paid once you arrived at the university. Please note, the partial payment may be changed based on your country of origin.</p>
+      </div>
 
-    <!-- 3. Key Skills Section -->
-    <section id="skills" class="section-padding">
-        <div class="container mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-12">Key Capabilities</h2>
+      <div class="question" onclick="toggleAnswer('answer4')">Where do I get my visa and how long does it take to have it?</div>
+      <div class="answer" id="answer4">
+        <p>Once we received the non-refundable partial payment 30% of tuition fees, we will process your visa supporting document and send to you via email or postal. Then you can lodge your visa application at nearest Thai Embassy or consulate in your country, which could take at least 1 week to 1 month, depending on the visa processing requirement of the Thai embassy or consulate in your country, which you have provided to us during your online application.</p>
+      </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Skill 1: Data Visualization -->
-                <div class="dark-card p-6 rounded-xl transition duration-500 hover:scale-[1.03] hover:border-accent border border-secondary-dark">
-                    <i data-lucide="bar-chart-3" class="w-10 h-10 text-accent mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Data Visualization & Analysis</h3>
-                    <p class="text-gray-400">Expert in translating complex data into visually engaging dashboards using Power BI and other tools to drive clear business understanding.</p>
-                </div>
+      <div class="question" onclick="toggleAnswer('answer5')">What documents must I present to get my visa?</div>
+      <div class="answer" id="answer5">
+        <p>We will provide you a scan copy of the visa issuance letter sent to your email and these documents are also sent by EMS to the postal address you specified on the online application form. Once you received the original visa issuance letter, all these documents must be submitted to the Thai embassy or consulate for you to be granted the visa.</p>
+      </div>
 
-                <!-- Skill 2: UI/UX Design -->
-                <div class="dark-card p-6 rounded-xl transition duration-500 hover:scale-[1.03] hover:border-accent border border-secondary-dark">
-                    <i data-lucide="pen-tool" class="w-10 h-10 text-accent mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
-                    <p class="text-gray-400">Designing user-centric interfaces with Figma, focusing on user research, competitive analysis, and creating intuitive digital experiences.</p>
-                </div>
+      <div class="question" onclick="toggleAnswer('answer6')">What if I studied before from another college or university?</div>
+      <div class="answer" id="answer6">
+        <p>If you have successfully completed units or subjects from another institution, either in Thailand or overseas or from a different degree at Rangsit University, you may apply for credit transfer that may reduce the time you take to complete your current degree.
+            The student is allowed to transfer a maximum of 75% of the total credits for the current program he is studying. The subjects eligible for credit transfer must have an exact equivalent credit value or higher, and a completed grade of C or above.
+            Please see the section Credit Transfer for more details.</p>
+      </div>
 
-                <!-- Skill 3: Project Management -->
-                <div class="dark-card p-6 rounded-xl transition duration-500 hover:scale-[1.03] hover:border-accent border border-secondary-dark">
-                    <i data-lucide="rocket" class="w-10 h-10 text-accent mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Project Management</h3>
-                    <p class="text-gray-400">Leading and supervising projects from ideation to completion, including frontend development and team coordination, as demonstrated in hackathons.</p>
-                </div>
+      <div class="question" onclick="toggleAnswer('answer7')">Do you require SAT/ACT scores?</div>
+      <div class="answer" id="answer7">
+        <p>The university does not require SAT/ACT scores to be admitted to the international programs.</p>
+      </div>
 
-                <!-- Skill 4: Database Management -->
-                <div class="dark-card p-6 rounded-xl transition duration-500 hover:scale-[1.03] hover:border-accent border border-secondary-dark">
-                    <i data-lucide="database" class="w-10 h-10 text-accent mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Database Management</h3>
-                    <p class="text-gray-400">Developing and managing relational databases using SQL to track inventory, manage records, and streamline operations for organizations.</p>
-                </div>
-            </div>
+      <div class="question" onclick="toggleAnswer('answer8')">Do you require letters of reference?</div>
+      <div class="answer" id="answer8">
+        <p>We do not require letters of reference and do not use them as part of the admissions process.</p>
+      </div>
 
-            <div class="mt-12 text-center">
-                <a href="https://github.com/WaiHmueThit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-accent hover:text-white transition duration-300 font-medium">
-                    View my technical repositories on GitHub <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+      <div class="question" onclick="toggleAnswer('answer9')">How early should a student apply?</div>
+      <div class="answer" id="answer9">
+        <p>You should allow at least 2 months before semester starts. Applying early is important. Our intakes are ;
+            Summer (June-July)
+            1st Semester (August to December)
+            2nd Semester (January to May)
+            Applications are accepted on a rolling basis and normally take at least 2 to 4 weeks until the student has received the visa.</p>
+      </div>
 
-    <!-- 4. Projects Section -->
-    <section id="projects" class="section-padding bg-secondary-dark">
-        <div class="container mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-4">Explore My Work</h2>
-            <p class="text-xl text-gray-400 text-center mb-12">Showcasing key Data, UI/UX, and PM projects.</p>
+      <div class="question" onclick="toggleAnswer('answer10')">What are your coursework requirements? </div>
+      <div class="answer" id="answer10">
+        <p>Visit the Programs section of the web site for course requirements to complete the program.</p>
+      </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
-         <!-- Project Card 1 – Advance Data Visualization -->
-<div class="dark-card rounded-xl overflow-hidden group">
-    <div class="h-48 bg-gray-700 flex items-center justify-center">
-        <!-- Add your project screenshot here -->
-        <img src="Advance.png" class="h-full w-full object-cover" /> 
-        <!-- <i data-lucide="bar-chart" class="w-16 h-16 text-gray-400"></i> -->
+      <div class="question" onclick="toggleAnswer('answer11')">How much does it cost to attend the program?</div>
+      <div class="answer" id="answer11">
+        <p>A current estimated cost of tuition fees can be found at the Tuition section of the web site.</p>
+      </div>
+
     </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-2">Dynamic Sale Analysis</h3>
-        <p class="text-gray-400 mb-4">Dynamic sale data analysis using advanced dashboards and insights created using Power BI, showcasing multi-layer analytics.</p>
-        <a href="https://github.com/WaiHmueThit23/Advance-Data-Visualization" target="_blank" class="text-accent hover:underline font-medium">
-            View on GitHub <i data-lucide="external-link" class="w-4 h-4 inline ml-1"></i>
-        </a>
-    </div>
-</div>
-
-<!-- Project Card 2 – Basic Data Visualization -->
-<div class="dark-card rounded-xl overflow-hidden group">
-    <div class="h-48 bg-gray-700 flex items-center justify-center">
-        <!-- Add your project screenshot here -->
-        <img src="Basic Visual.png" class="h-full w-full object-cover" />
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-2">Sale Data Visualization</h3>
-        <p class="text-gray-400 mb-4">Foundational Power BI dashboards demonstrating core visual analytics and storytelling.</p>
-        <a href="https://github.com/WaiHmueThit23/Basic-Data-Visualization" target="_blank" class="text-accent hover:underline font-medium">
-            View on GitHub <i data-lucide="external-link" class="w-4 h-4 inline ml-1"></i>
-        </a>
-    </div>
-</div>
-
-<!-- Project Card 3 – CIMSO Hackathon Mobile Application -->
-<div class="dark-card rounded-xl overflow-hidden group">
-    <div class="h-48 bg-gray-700">
-        <!-- Project image -->
-        <img src="Castella.png" class="h-full w-full object-cover" />
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-2">CIMSO Hospitality Mobile App</h3>
-        <p class="text-gray-400 mb-4">Developed a mobile membership and booking system for hotel & restaurant services during CIMSO Hackathon.</p>
-        <a href="https://github.com/WaiHmueThit23/CIMSO-Hackathon-Castella-Mobile-Application" target="_blank" class="text-accent hover:underline font-medium">
-            View on GitHub <i data-lucide="external-link" class="w-4 h-4 inline ml-1"></i>
-        </a>
-    </div>
-</div>
-
-<!-- Project Card 4 – Blood Bank Database SQL System -->
-<div class="dark-card rounded-xl overflow-hidden group">
-    <div class="h-48 bg-gray-700 flex items-center justify-center">
-        <!-- Add your project screenshot here -->
-        <img src="blood bank.jpg" class="h-full w-full object-cover" /> 
-        <!-- <i data-lucide="droplets" class="w-16 h-16 text-gray-400"></i> -->
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-2">Blood Bank Database System</h3>
-        <p class="text-gray-400 mb-4">Designed a full SQL database system for managing donors, blood types, organizations, and transactions.</p>
-        <a href="https://github.com/WaiHmueThit23/Blood-Bank-Database-SQL-system" target="_blank" class="text-accent hover:underline font-medium">
-            View on GitHub <i data-lucide="external-link" class="w-4 h-4 inline ml-1"></i>
-        </a>
-    </div>
-</div>
-
-<!-- Project Card 5 – Health2Go UI -->
-<div class="dark-card rounded-xl overflow-hidden group">
-    <div class="h-48 bg-gray-700 flex items-center justify-center">
-        <!-- Add your project screenshot here -->
-        <img src="Health2Go.png" class="h-full w-full object-cover" /> 
-        <!-- <i data-lucide="heart-pulse" class="w-16 h-16 text-gray-400"></i>-->
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-2">Health2Go – User Interface Design</h3>
-        <p class="text-gray-400 mb-4">UX/UI design for a health tracking application featuring workouts, food logs, water intake, period cycle, and education.</p>
-        <a href="https://github.com/WaiHmueThit23/Health2Go-User-Interface" target="_blank" class="text-accent hover:underline font-medium">
-            View on GitHub <i data-lucide="external-link" class="w-4 h-4 inline ml-1"></i>
-        </a>
-    </div>
-</div>
-
-            
-            <div class="text-center mt-12">
-                <a href="https://github.com/WaiHmueThit?tab=repositories" target="_blank" rel="noopener noreferrer" class="px-8 py-3 bg-accent text-primary-dark font-bold rounded-lg transition duration-300 hover:bg-emerald-400 shadow-xl">
-                    See All Projects on GitHub
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 5. Contact Section -->
-    <section id="contact" class="section-padding">
-        <div class="container mx-auto px-6 lg:px-8 max-w-2xl text-center">
-            <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
-            <p class="text-xl text-gray-400 mb-10">I'm currently available for new opportunities and collaborations. Feel free to reach out!</p>
-            
-            <div class="dark-card p-8 rounded-xl">
-                <p class="text-2xl font-semibold mb-6">Send an email:</p>
-                <a href="mailto:casluna6509862@gmail.com" class="text-accent text-3xl font-bold break-all hover:text-emerald-400 transition duration-300">
-                    casluna6509862@gmail.com
-                </a>
-                
-                <div class="mt-8 pt-6 border-t border-gray-700">
-                    <p class="text-lg mb-4">Find me on professional networks:</p>
-                    <div class="flex justify-center space-x-6">
-                        <a href="https://linkedin.com/in/waihmuethit" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-accent transition duration-300">
-                            <i data-lucide="linkedin" class="w-8 h-8"></i>
-                        </a>
-                        <a href="https://github.com/WaiHmueThit" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-accent transition duration-300">
-                            <i data-lucide="github" class="w-8 h-8"></i>
-                        </a>
-                        <!-- Placeholder for a personal blog or professional site -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-accent transition duration-300">
-                            <i data-lucide="globe" class="w-8 h-8"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-secondary-dark py-8 mt-12">
-        <div class="container mx-auto px-6 lg:px-8 text-center text-gray-500">
-            <p>&copy; 2025 Wai Hmue Thit. All rights reserved.</p>
-            <p class="mt-2 text-sm">Design inspired by modern BI dashboards.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript for Mobile Menu Functionality -->
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
+  </div>
+  <script>
+    function toggleAnswer(id) {
+        var answer = document.getElementById(id);
+        if (answer.style.display === "none") {
+        answer.style.display = "block";
+        } else {
+        answer.style.display = "none";
+        }
+    }
     </script>
+ 
+  <div class="container">
+    <button class="open-button" onclick="openForm()">
+      <i class="fab fa-facebook-messenger"></i>
+    </button>
+ 
+<div class="chat-popup" id="myForm">
+  <!--<form action="/action_page.php" class="form-container">-->
+    <form class="form-container">
+   <!-- <img src ="./ric_logo.webp">-->
+    <br>
+    <label for="msg"><b>You can ask anything about admission requirements for applying to RIC.</b></label>
+    <textarea class = "textareaTop" placeholder="Ask a question :" name="msg" id ="user-question" required></textarea>
+    <label for = "ans"><b>Answer:</b></label>
+    <textarea placeholder="" id = "generate-answer" name="msg" disabled ></textarea>
+
+    <button type="button" id = "send" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+
+  //Clear
+  document.querySelector("#user-question").value= "";
+  document.querySelector("#generate-answer").textContent = "";
+
+}
+</script>
+<script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+  <!--<p id = "msgI">Hello</p>-->
+  <script type="module">
+    import { GoogleGenerativeAI } from "@google/generative-ai";
+    // Fetch your API_KEY
+    const API_KEY = "AIzaSyBZndVdRadQyh3NohKsiAtUv043BLJ7XLQ";
+    // Access your API key (see "Set up your API key" above)
+    const genAI = new GoogleGenerativeAI(API_KEY);
+    const sendQuestion = document.querySelector("#send");
+    sendQuestion.addEventListener("click", async () => {
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const chat = model.startChat({
+      history: [
+      {
+        role: "user",
+        parts: "What are the admission requirements?"
+      },
+      {
+        role: "model",
+        parts: "The academic entry requirement is high school diploma or equivalent and IELTS 5.5 or equivalent"
+      },
+      {
+        role: "user",
+        parts: "How long does the admissions process take?"
+      },
+      {
+        role: "model",
+        parts: "Once we have the completed application file, including all required materials, it usually takes a few days to a week for application processing, review, and for your Letter of Acceptance to be sent by email. You will then be required to pay a non-refundable partial payment 30% of tuition fees of the semester before your visa supporting document is granted. The remaining 70% of the fees are paid once you arrived at the university. Please note, the partial payment may be changed based on your country of origin."
+      },
+      {
+        role: "user",
+        parts: "Where do I get my visa and how long does it take to have it?"
+      },
+      {
+        role: "model",
+        parts: "Once we received the non-refundable partial payment 30% of tuition fees, we will process your visa supporting document and send to you via email or postal. Then you can lodge your visa application at nearest Thai Embassy or consulate in your country, which could take at least 1 week to 1 month, depending on the visa processing requirement of the Thai embassy or consulate in your country, which you have provided to us during your online application."
+      },
+      {
+        role: "user",
+        parts: "What if I studied before from another college or university?"
+      },
+      {
+        role: "model",
+        parts: "If you have successfully completed units or subjects from another institution, either in Thailand or overseas or from a different degree at Rangsit University, you may apply for credit transfer that may reduce the time you take to complete your current degree. The student is allowed to transfer a maximum of 75% of the total credits for the current program he is studying. The subjects eligible for credit transfer must have an exact equivalent credit value or higher, and a completed grade of C or above. Please see the section Credit Transfer for more details."
+      },
+      {
+        role: "user",
+        parts: "Do you require SAT/ACT scores?"
+      },
+      {   
+        role: "model",
+        parts: "The university does not require SAT/ACT scores to be admitted to the international programs."
+      },
+      {
+        role: "user",
+        parts: "Do you require letters of reference?"  
+      },
+      {
+        role: "model",
+        parts: "We do not require letters of reference and do not use them as part of the admissions process."
+      },
+      {
+        role: "user",
+        parts: "How early should a student apply?"
+      },
+      {
+        role: "model",
+        parts: "You should allow at least 2 months before semester starts. Applying early is important. Our intakes are ; Summer (June-July) 1st Semester (August to December) 2nd Semester (January to May) Applications are accepted on a rolling basis and normally take at least 2 to 4 weeks until the student has received the visa."
+      },
+      {
+        role: "user",
+        parts: "What are your coursework requirements?"
+      },
+      {
+        role: "model",
+        parts: "For the Bachelor's degrees, Rangsit university do not require anything in advance except for English proficiency test. For the Master's programs, you must have a Bachelor's degrees first and English proficiency test."
+      },
+      {
+        role: "user",
+        parts: "How much does it cost to attend the program?"
+      },
+      {
+        role: "model",
+        parts: "Around 500,000 to 600,000 for Four years program of Bachelor."
+      },
+      {
+        role: "user",
+        parts: "How long does Bachelor's Degree takes in Rangsit University?"
+      },
+      {
+        role: "model",
+        parts: "It might take from at least 4 years to graduate"
+      },
+      {
+        role:"user",
+        parts:"Where is Rangsit?"
+      },
+      {
+        role:"model",
+        parts:"Pathum Thani, Lak Hok, Thailand"
+      },
+      {
+        role:"user",
+        parts:"How can we make the payment for deposite fees after admission"
+      },
+      {
+        role:"model",
+        parts:"We offer various kinds of payment either you can scan the barcode and pay by banking, or you can go to the admission office counter to pay with cash. "
+      },
+      {
+        role:"user",
+        parts:"How do i register for classes or changes classes?"
+      },
+      {
+        role:"model",
+        parts:"Once admitted, you will receive instructions on how to register for classes. You will have an access to rsu intranet with your student id. Log in to intranet and go to Registeration menu, in registeration menu, you can enroll the subjects and withdrawl the subjects as you wish."
+      },
+      {
+        role:"user",
+        parts:"Which intake can I apply for"
+      },
+      {
+        role:"model",
+        parts:"In Rangsit University, there are 3 intakes that you can apply for. First semester intake will be started in every August of each year, Second semester intake will be held in every January and the summer intake starts from every july. So that, you can choose the intake and apply to Rangsit university 2 months earlier before the start of semester."
+      },
+      {
+        role:"user",
+        parts:"How can i transfer to other country from Thailand"
+      },
+      {
+        role:"model",
+        parts:"Yes sir, We have 3+1 programs which means that you will be able to have 2 degrees, one from Rangsit University and the second degree from co-opperative university. We also have exchange programs to Europe, United States and Austrilia. You will have an information for these later in campus "
+      },
+      {
+        role:"user",
+        parts:"How many majors in Rangsit University International College"
+      },
+      {
+        role:"model",
+        parts:"There are 6 majors in RIC. \
+              1. Information and Communications Technology.\
+              2. Interiror Design Program\
+              3. International Business\
+              4. Civil Engineering\
+              5. Electronics Engineering\
+              6. Biomedical Science"
+      },
+      {
+        role:"user",
+        parts:"What are the benefits of studying at RIC"
+      },
+      {
+        role:"model",
+        parts:"RIC always provides an easy, comfort facilities for students such as dream space, upgraded labs and other healthcare services.And you can always ask for help from RSU police by anytime."
+      },
+      {
+        role:"user",
+        parts:"Will RIC help us with our visa application?"
+      },
+      {
+        role:"model",
+        parts:"RIC will provide you a visa support documents to make your visa application process easy and comfort."
+      }
+
+        ],
+        generationConfig: {
+          maxOutputTokens: 100,
+        },
+      });
+      const userQuestion = document.querySelector("#user-question").value;
+      const result = await chat.sendMessage(userQuestion);
+      const response = await result.response;
+      const answer = response.text();
+      var showText = document.getElementById("generate-answer");
+      showText.textContent = answer;
+
+      })
+
+       
+  </script>
+</div>
+<footer class="foot">
+  <div class="contact">
+      <ul class="links contact-icons">
+          <li>CONTACT US</li>
+          <li><a href="#"><i class="fa fa-envelope"></i> Email : rsuip@rsu.ac.th</a></li>
+          <li><a href="#"><i class="fas fa-phone"></i> Telephone : + 66(0)2997-2200 </a></li>
+          <li>    ext 4012,4019</li>
+          <li><a href="#"><i class="fa fa-fax"></i> Fax : +66 (0)2 997-2200 ext 4016</a></li>
+      </ul>
+  </div>
+  <div class="address">
+      <ul class="links contact-icons">
+          <li>ADDRESS</li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> 52/347 Muang-Ake Phaholyothin Road Lak-Hok Muang
+                  Pathumthani 12000, Thailand</a></li>
+      </ul>
+  </div>
+  <div class="socialmedia">
+      <h4>SOCIAL MEDIA</h4>
+      <p>
+          <i class="fa fa-paper-plane"></i> Follow us...
+      </p>
+      <div class="icons" id = "smicon">
+          <a href="https://web.facebook.com/RSUIP/?_rdc=1&_rdr"target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/rangsit_inter/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://line.me/ti/p/~@rsuinter" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+  </div>
+</footer>
+
 </body>
 </html>
